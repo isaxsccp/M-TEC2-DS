@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+// Classe Base: Publicacao
+class Publicacao {
+private String titulo;
+private String autor;
+private int anoPublicacao;
+
+// Construtor
+public Publicacao(String titulo, String autor, int anoPublicacao) {
+    this.titulo = titulo;
+    this.autor = autor;
+    this.anoPublicacao = anoPublicacao;
+}
