@@ -17,6 +17,10 @@ public class Main {
     }
 }
 
+
+
+
+
 public class Publicacao {
     private String titulo;
     private String autor;
@@ -59,6 +63,10 @@ public class Publicacao {
     }
 }
 
+
+
+
+
 public class Livro extends Publicacao {
     private int numPaginas;
     private String editora;
@@ -93,7 +101,7 @@ public class Livro extends Publicacao {
     }
 
     void exibirDetalhes(boolean exibir) {
-        if (exibir) {
+        if (exibir == true) {
             System.out.println("Número de páginas: " + this.numPaginas);
             System.out.println("Nome da editora: " + this.editora);
         } else {
@@ -101,6 +109,12 @@ public class Livro extends Publicacao {
         }
     }
 }
+
+
+
+
+
+
 
 public class Revista extends Publicacao {
     private int numPaginas;
@@ -136,7 +150,7 @@ public class Revista extends Publicacao {
     }
 
     void exibirDetalhes(boolean exibir) {
-        if (exibir) {
+        if (exibir == true) {
             System.out.println("Número de páginas: " + this.numPaginas);
             System.out.println("Nome da editora: " + this.editora);
         } else {
