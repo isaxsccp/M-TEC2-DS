@@ -164,3 +164,44 @@ Scanner scanner = new Scanner(System.in);
     scanner.close();
 }
 }
+
+public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Criar duas instâncias de Carro
+        System.out.println("Insira os dados do primeiro carro:");
+        Carro carro1 = criarCarro(scanner);
+        System.out.println("Insira os dados do segundo carro:");
+        Carro carro2 = criarCarro(scanner);
+
+        // Criar duas instâncias de Moto
+        System.out.println("Insira os dados da primeira moto:");
+        Moto moto1 = criarMoto(scanner);
+        System.out.println("Insira os dados da segunda moto:");
+        Moto moto2 = criarMoto(scanner);
+
+        // Calcular IPVA e imprimir ficha técnica
+        carro1.calcularIpva();
+        carro2.calcularIpva();
+        moto1.calcularIpva();
+        moto2.calcularIpva();
+
+        System.out.println("\nFicha Técnica do primeiro carro:");
+        carro1.imprimirFicha();
+        System.out.println("\nFicha Técnica do segundo carro:");
+        carro2.imprimirFicha();
+        System.out.println("\nFicha Técnica da primeira moto:");
+        moto1.imprimirFicha();
+        System.out.println("\nFicha Técnica da segunda moto:");
+        moto2.imprimirFicha();
+
+        scanner.close();
+    }
+
+    // Método auxiliar para criar um carro
+    private static Carro criarCarro(Scanner scanner) {
+        System.out.print("Modelo: ");
+        String modelo = scanner.nextLine();
+        System.out.print("Valor da Tabela: ");
+        double valorTabela = scanner.nextDouble();
+        scanner.nextLine(); // 
